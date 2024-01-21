@@ -11,7 +11,7 @@
       }
   
       .popup {
-        @apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 rounded-lg text-white opacity-0 transition-opacity duration-300 ease-in-out;
+        @apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 rounded-lg text-white opacity-0 transition-opacity duration-1000 ease-in-out;
         @apply flex flex-col justify-center items-center;
       }
   
@@ -23,5 +23,7 @@
       .popup-content {
         @apply text-center;
       }
+    
+      
 }
 

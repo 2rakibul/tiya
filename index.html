@@ -52,23 +52,30 @@
                 class="text-white font-semibold text-sm flex flex-col bg-custom p-5 pl-10 sticky -ml-10 lg:flex-row"
               >
                 <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-
                 <li class="lg:mr-5 mb-2 z-10">
-                  <a href="./index.html" class="hover:text-custom2">Home</a>
+                  <a href="./index.html" class="hover:text-custom2 transition-all duration-500 ease-in-out">Home</a>
                 </li>
                 <li class="lg:mr-5 mb-2 z-10">
-                  <a href="#about" class="hover:text-custom2">About</a>
+                  <a href="./index.html#about" class="hover:text-custom2 transition-all duration-500 ease-in-out"
+                    >About</a
+                  >
                 </li>
                 <li class="lg:mr-5 mb-2 z-10">
-                  <a href="#membership" class="hover:text-custom2">Membership</a>
+                  <a href="./index.html#membership" class="hover:text-custom2 transition-all duration-500 ease-in-out"
+                    >Membership</a
+                  >
                 </li>
                 <li class="lg:mr-5 mb-2 z-10">
-                  <a href="#events" class="hover:text-custom2">Event</a>
+                  <a href="./index.html#events" class="hover:text-custom2 transition-all duration-500 ease-in-out"
+                    >Event</a
+                  >
                 </li>
                 <li class="lg:mr-5 mb-2 z-10">
-                  <a href="#contact" class="hover:text-custom2">Contact Us</a>
+                  <a href="./index.html#contact" class="hover:text-custom2 transition-all duration-500 ease-in-out"
+                    >Contact Us</a
+                  >
                 </li>
-                <li class="relative whitespace-nowrap hover:text-custom2 z-10">
+                <li class="relative whitespace-nowrap hover:text-custom2 transition-all duration-500 ease-in-out z-10">
                   <a href="#"
                     >Pages
                     <svg
@@ -80,16 +87,17 @@
                       <path d="M10 12l-6-6-1.4 1.4L10 14.8l7.4-7.4L16 6z" />
                     </svg>
                   </a>
+
                   <ul
                     id="drop-down_menu"
-                    class="absolute hidden bg-custom lg:bg-white text-white shadow-md py-3 px-2 mt-5 -ml-5 rounded-lg transition-transform duration-500 ease-in-out"
+                    class="absolute hidden bg-custom lg:bg-white text-white shadow-md py-3 px-2 mt-5 -ml-5 rounded-lg transition-transform duration-1000 ease-in-out transform"
                   >
-                  <div class="absolute inset-0 bg-black bg-opacity-50 z-10 rounded-lg"></div>
+                 <div class="absolute inset-0 bg-black bg-opacity-50 z-10 rounded-lg"></div>
 
-                    <li class="whitespace-nowrap hover:text-custom2 relative z-20">
+                    <li class="whitespace-nowrap hover:text-custom2 transition-all duration-500 ease-in-out relative z-20">
                       <a href="./listing.html">Event Listing</a>
                     </li>
-                    <li class="whitespace-nowrap hover:text-custom2 relative z-20">
+                    <li class="whitespace-nowrap hover:text-custom2 transition-all duration-500 ease-in-out relative z-20">
                       <a href="./event.html">Event Detail</a>
                     </li>
                   </ul>
@@ -98,7 +106,7 @@
               <a
                 href="#"
                 id="lg-member_login_desktop"
-                class="hidden lg:block border-2 border-custom2 rounded-full py-2 px-3 text-custom2 font-semibold text-sm hover:bg-custom2 hover:text-white"
+                class="hidden lg:block border-2 border-custom2 rounded-full py-2 px-3 text-custom2 font-semibold text-sm hover:bg-custom2 transition-all duration-1000 ease-in-out hover:text-white "
                 >Member Login</a
               >
             </div>
@@ -113,7 +121,7 @@
             <a
               href="#"
               id="lg-member_login_mobile"
-              class="border-2 border-custom2 rounded-full py-1 px-2 ml-2 z-10 text-custom2 font-semibold text-sm hover:bg-custom2 hover:text-white lg:hidden float-right mt-2.5"
+              class="border-2 border-custom2 rounded-full py-1 px-2 ml-2 z-10 text-custom2 font-semibold text-sm hover:bg-custom2 transition-all duration-1000 ease-in-out hover:text-white lg:hidden float-right mt-2.5"
               >Member Login</a
             >
           </div>
@@ -121,12 +129,12 @@
         <!-- NavBar End -->
 
         <!-- Member Login Section Starts -->
-        <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-99 transition-opacity duration-500 ease-in-out hidden "></div>
+        <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-99 transition-opacity duration-1000 ease-in-out hidden "></div>
         <div class="fixed top-0 right-0 z-99">
           
           <div
             id="pop-out"
-            class="p-8 lg:w-[400px] bg-[#81B29A] relative hidden transition-transform duration-500 ease-in-out transform translate-x-full"
+            class="p-8 lg:w-[400px] bg-[#81B29A] relative hidden transition-transform duration-1000 ease-in-out transform translate-x-full"
             style="height: 100svh"
           >
             <div class="flex items-center justify-between">
@@ -256,7 +264,7 @@
           <div class="">
             <a
               href="#about"
-              class="px-2 py-1 border-custom2 border-2 rounded-full hover:bg-custom2 text-white"
+              class="px-2 py-1 border-custom2 border-2 rounded-full hover:bg-custom2 transition-all duration-1000 ease-in-out text-white"
               >Our Story</a
             >
 
@@ -431,7 +439,7 @@
               />
             </div>
             <button
-              class="sm:px-5 sm:py-2 w-full sm:w-32 bg-orange-300 rounded-full"
+              class="sm:px-5 sm:py-2 w-full sm:w-32 bg-orange-300 rounded-full hover:bg-red-400 hover:text-white transition-all duration-1000 ease-in-out"
             >
               Submit
             </button>
@@ -630,7 +638,7 @@
               ></textarea>
             </p>
             <button
-              class="bg-custom2 text-center px-3 py-2 w-full rounded-full mb-5"
+              class="bg-custom2 text-center px-3 py-2 w-full rounded-full mb-5 hover:bg-red-400 hover:text-white transition-all duration-1000 ease-in-out"
             >
               Submit
             </button>
@@ -670,7 +678,7 @@
                 <p class="text-gray-600"><strong class="mr-6 text-custom">Ticket:</strong>
                   $250</p>
               </div>
-              <button class="px-3 py-1 bg-custom2 rounded-full text-white font-bold hover:bg-red-400 "><a href="./event.html">Buy Now</a>
+              <button class="px-3 py-1 bg-custom2 rounded-full text-white font-bold hover:bg-red-400 transition-all duration-1000 ease-in-out "><a href="./event.html">Buy Now</a>
               </button>
              </div>
             </div>
@@ -702,7 +710,7 @@
                 <p class="text-gray-600"><strong class="mr-6 text-custom">Ticket:</strong>
                   $250</p>
               </div>
-              <button class="px-3 py-1 bg-custom2 rounded-full text-white font-bold hover:bg-red-400 "><a href="./event.html">Buy Now</a>
+              <button class="px-3 py-1 bg-custom2 rounded-full text-white font-bold hover:bg-red-400  transition-all duration-1000 ease-in-out"><a href="./event.html">Buy Now</a>
               </button>
              </div>
             </div>
@@ -722,7 +730,7 @@
             <input type="email" placeholder="Email" class="p-2.5 border-2 rounded-full w-1/2">
           </div>
           <textarea name="message" placeholder="Message"  class="p-2.5 border-2 rounded-xl resize-none w-full" ></textarea>
-          <button class="px-3 py-2 bg-custom2 rounded-full text-white font-bold hover:bg-red-400 w-full"><a href="#">Submit From</a>
+          <button class="px-3 py-2 bg-custom2 rounded-full text-white font-bold hover:bg-red-400 transition-all duration-1000 ease-in-out w-full"><a href="#">Submit From</a>
         </div>
       </div>
       <div class="relative">
