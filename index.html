@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/tiya/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <base href="">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -13,12 +13,14 @@
       referrerpolicy="no-referrer"
     />
     <title>tiya</title>
-    <script type="module" crossorigin src="/tiya/assets/index-Oj4NGL1A.js"></script>
-    <link rel="stylesheet" crossorigin href="/tiya/assets/index-2eSLkUJJ.css">
+    
+
+    <script type="module" crossorigin src="/tiya/assets/main-O7W8DsGE.js"></script>
+    <link rel="stylesheet" crossorigin href="/tiya/assets/main-BVUmbMf2.css">
   </head>
   <body class="font-sans scroll-smooth">
     <section id="home"
-      class=" bg-[url('./first-page.jpg')] bg-cover bg-center relative "
+      class=" bg-[url('./public/first-page.jpg')] bg-cover bg-center relative "
       style="height: 100svh"
     >
       <div class="absolute inset-0 bg-black bg-opacity-50 z-10 "></div>
@@ -268,7 +270,7 @@
             src="https://www.youtube.com/embed/MGNgbNGOzh8?si=w0r-UzsIQq8NYOI3"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
             allowfullscreen
           ></iframe>
         </div>
@@ -312,10 +314,9 @@
           <!-- right div -->
           <div class="flex flex-col lg:flex-row gap-x-5">
             <!-- person-1 -->
-            <div
+            <div id="popup-container"
               class="mt-4 person-container relative"
-              onmouseenter="showPopup(this)"
-              onmouseleave="hidePopup(this)"
+              
             >
               <div class="lg:w-[306px] lg:h-[204px]">
                 <img
@@ -343,8 +344,7 @@
 
             <div
               class="mt-4 person-container relative"
-              onmouseenter="showPopup(this)"
-              onmouseleave="hidePopup(this)"
+              
             >
               <div class="lg:w-[306px] lg:h-[204px]">
                 <img
@@ -375,7 +375,7 @@
     <!-- section two end -->
     <!-- section three newsteller -->
     <section
-      class="bg-[url('./frederik-rosar.jpg')] bg-cover bg-center relative"
+      class="bg-[url('./public/frederik-rosar.jpg')] bg-cover bg-center relative"
     >
       <svg
         viewBox="0 0 1265 144"
@@ -428,7 +428,7 @@
                 type="email"
                 class="sm:text-xl focus:outline-none"
                 placeholder="Email"
-                id=""
+               
               />
             </div>
             <button
@@ -608,7 +608,7 @@
               <input
                 type="text"
                 name="Name"
-                id=""
+                
                 placeholder="Your Name"
                 class="text-sm focus:outline-none"
               />
@@ -617,7 +617,7 @@
               <input
                 type="email"
                 name="Name"
-                id=""
+               
                 placeholder="Email"
                 class="text-sm focus:outline-none"
               />
@@ -625,7 +625,7 @@
             <p class="px-3 py-2 bg-white border-2 w-full rounded-2xl mb-5">
               <textarea
                 name=""
-                id=""
+                
                 placeholder="Comment"
                 class="focus:outline-none w-4/5"
               ></textarea>
@@ -653,8 +653,7 @@
                 <h1 class="text-center  text-5xl font-bold text-white">24</h1>
                 <p class="text-center text-white font-bold">Feb 2048</p>
               </div>
-              <div class="person-container" onmouseenter="showPopup(this)"
-              onmouseleave="hidePopup(this)">
+              <div class="person-container">
                 <img class="md:max-w-[416px] max-h-[216px] rounded-xl" src="./professional-golf-player.jpg" alt="">
                 <div class="popup">
                   <a href="./event.html" class="p-3 bg-custom2 bg-opacity-50 rounded-full"><i class="fa-solid fa-link"></i></a>
@@ -686,8 +685,7 @@
                 <h1 class="text-center  text-5xl font-bold text-white">28</h1>
                 <p class="text-center text-white font-bold">Feb 2048</p>
               </div>
-              <div class="person-container" onmouseenter="showPopup(this)"
-              onmouseleave="hidePopup(this)">
+              <div class="person-container">
                 <img class="md:max-w-[416px] max-h-[216px] rounded-xl" src="./girl-taking-selfie-with-friends-golf-field.jpg" alt="">
                 <div class="popup">
                   <a href="./event.html" class="p-3 bg-custom2 bg-opacity-50 rounded-full"><i class="fa-solid fa-link"></i></a>
@@ -792,5 +790,7 @@
     <a href="#home"  class="fixed bottom-7 right-7 z-50 bg-custom p-4 rounded-full text-white">
            <i class="fas fa-angle-up sm:text-2xl"></i>
     </a>
+
+
   </body>
 </html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/tiya/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>tiya</title>
+    <script type="module" crossorigin src="/tiya/assets/main-O7W8DsGE.js"></script>
+    <link rel="stylesheet" crossorigin href="/tiya/assets/main-BVUmbMf2.css">
+  </head>
+  <body class="font-sans scroll-smooth">
+    <section
+      id="home"
+      class="relative bg-[url('./public/first-page.jpg')] bg-cover bg-center"
+      style="min-height: 70vh"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+      <!-- Nav Bar and Member Login  Section-->
+      <div class="h-[94px] bg-custom">
+        <!-- NavBar Start -->
+        <nav class="py-5 lg:px-28 pl-10 relative z-99 max-w-[1440px] mx-auto">
+          <div class="flex flex-col items-start lg:flex-row lg:justify-between">
+            <a
+              class="text-white font-bold flex items-start -ml-5 lg:items-center"
+              href="index.html"
+            >
+              <img
+                class="w-12 h-12 filter brightness-0 invert"
+                src="./logo.png"
+                alt="logo"
+              />
+              <span class="lg:ml-2.5 mt-2 lg:mt-0 lg:text-2xl"
+                >Tiya
+                <small class="block uppercase text-xs lg:text-sm"
+                  >Golf Club</small
+                ></span
+              >
+            </a>
+            <div id="nav-bar" class="lg:flex lg:items-center hidden w-full">
+              <ul
+                class="text-white font-semibold text-sm flex flex-col bg-custom p-5 pl-10 sticky -ml-10 lg:flex-row"
+              >
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                <li class="lg:mr-5 mb-2 z-10">
+                  <a href="./index.html" class="hover:text-custom2">Home</a>
+                </li>
+                <li class="lg:mr-5 mb-2 z-10">
+                  <a href="./index.html#about" class="hover:text-custom2"
+                    >About</a
+                  >
+                </li>
+                <li class="lg:mr-5 mb-2 z-10">
+                  <a href="./index.html#membership" class="hover:text-custom2"
+                    >Membership</a
+                  >
+                </li>
+                <li class="lg:mr-5 mb-2 z-10">
+                  <a href="./index.html#events" class="hover:text-custom2"
+                    >Event</a
+                  >
+                </li>
+                <li class="lg:mr-5 mb-2 z-10">
+                  <a href="./index.html#contact" class="hover:text-custom2"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="relative whitespace-nowrap hover:text-custom2 z-10">
+                  <a href="#"
+                    >Pages
+                    <svg
+                      id="drop-down"
+                      class="fill-current h-4 w-4 inline-block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M10 12l-6-6-1.4 1.4L10 14.8l7.4-7.4L16 6z" />
+                    </svg>
+                  </a>
+                  <ul
+                    id="drop-down_menu"
+                    class="absolute hidden bg-custom lg:bg-white text-white shadow-md py-3 px-2 mt-5 -ml-5 rounded-lg transition-transform duration-500 ease-in-out"
+                  >
+                    <div
+                      class="absolute inset-0 bg-black bg-opacity-50 z-10 rounded-lg"
+                    ></div>
+
+                    <li
+                      class="whitespace-nowrap hover:text-custom2 relative z-20"
+                    >
+                      <a href="./listing.html">Event Listing</a>
+                    </li>
+                    <li
+                      class="whitespace-nowrap hover:text-custom2 relative z-20"
+                    >
+                      <a href="./event.html">Event Detail</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <a
+                href="#"
+                id="lg-member_login_desktop"
+                class="hidden lg:block border-2 border-custom2 rounded-full py-2 px-3 text-custom2 font-semibold text-sm hover:bg-custom2 hover:text-white"
+                >Member Login</a
+              >
+            </div>
+          </div>
+          <div
+            class="absolute right-5 top-6 lg:hidden flex flex-row-reverse items-center"
+          >
+            <i
+              id="menu"
+              class="fa-solid fa-bars text-white text-2xl float-right mt-2 ml-3 z-10"
+            ></i>
+            <a
+              href="#"
+              id="lg-member_login_mobile"
+              class="border-2 border-custom2 rounded-full py-1 px-2 ml-2 z-10 text-custom2 font-semibold text-sm hover:bg-custom2 hover:text-white lg:hidden float-right mt-2.5"
+              >Member Login</a
+            >
+          </div>
+        </nav>
+        <!-- NavBar End -->
+
+        <!-- Member Login Section Starts -->
+        <div
+          id="overlay"
+          class="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-99 transition-opacity duration-500 ease-in-out hidden"
+        ></div>
+        <div class="fixed top-0 right-0 z-99">
+          <div
+            id="pop-out"
+            class="p-8 lg:w-[400px] bg-[#81B29A] relative hidden transition-transform duration-500 ease-in-out transform translate-x-full"
+            style="height: 100svh"
+          >
+            <div class="flex items-center justify-between">
+              <h5 class="text-base font-bold">Member Login</h5>
+              <button id="remove" class="p-2 border">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="flex flex-col justify-between gap-y-16 mt-6 scroll-m-1">
+              <div class="flex flex-col">
+                <div class="mb-4 flex flex-col">
+                  <label class="mb-2" for="member-login-number"
+                    >Membership No.</label
+                  >
+
+                  <input
+                    type="text"
+                    name="member-login-number"
+                    id="member-login-number"
+                    class="p-2 rounded-full"
+                    placeholder="11002560"
+                    required=""
+                  />
+                </div>
+
+                <div class="mb-4 flex flex-col">
+                  <label class="form-label mb-2" for="member-login-password"
+                    >Password</label
+                  >
+
+                  <input
+                    type="password"
+                    name="member-login-password"
+                    id="member-login-password"
+                    pattern="[0-9a-zA-Z]{4,10}"
+                    class="p-2 rounded-full"
+                    placeholder="Password"
+                    required=""
+                  />
+                </div>
+
+                <div class="form-check mb-4">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Remember me
+                  </label>
+                </div>
+
+                <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                  <button type="submit" class="">Login</button>
+                </div>
+
+                <div class="text-center my-4">
+                  <a href="#">Forgotten password?</a>
+                </div>
+              </div>
+
+              <div class="mt-auto mb-5 relative text-center">
+                <p class="mb-14">
+                  <strong class="text-white me-3">Any Questions?</strong>
+
+                  <a href="tel: 010-020-0340" class="contact-link">
+                    010-020-0340
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <svg
+              class="absolute bottom-0 left-0 z-20"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+            >
+              <path
+                fill="#3D405B"
+                fill-opacity="1"
+                d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <!-- Member Login Section Ends -->
+      </div>
+      <!-- Nav Bar and Member Login  Section Ends-->
+
+      <svg
+        viewBox="0 0 1962 178"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <path
+          fill="#3D405B"
+          d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+          stroke-width="0"
+        ></path>
+        <path
+          fill="#3D405B"
+          d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+          stroke-width="0"
+        ></path>
+        <path
+          fill="#3D405B"
+          d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+          stroke-width="0"
+        ></path>
+        <path
+          fill="#3D405B"
+          d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+          stroke-width="0"
+        ></path>
+        <path
+          fill="#3D405B"
+          d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+          stroke-width="0"
+        ></path>
+        <path
+          fill="#3D405B"
+          d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+          stroke-width="0"
+        ></path>
+        <path
+          fill="#3D405B"
+          d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+          stroke-width="0"
+        ></path>
+      </svg>
+      <div class="px-10 lg:px-28 z-20 relative max-w-[1440px] mx-auto">
+        <div class="space-y-4 font-bold">
+          <h2 class="text-white text-4xl mt-36 lg:mt-20 lg:text-5xl">
+            Event Detail.
+          </h2>
+          <div class="">
+            <button
+              class="px-5 py-2 bg-custom2 rounded-full text-white font-bold hover:bg-red-400"
+            >
+              <a href="#club">Learn More</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <svg
+        class="absolute -bottom-1 left-0 z-10"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1962 178"
+      >
+        <g transform="scale(1, -1) translate(0, -178)">
+          <path
+            fill="#ffffff"
+            d="M 0 138 C 118.5 138 118.5 129 237 129 L 237 129 L 237 0 L 0 0 Z"
+            stroke-width="0"
+          ></path>
+          <path
+            fill="#ffffff"
+            d="M 236 129 C 373 129 373 148 510 148 L 510 148 L 510 0 L 236 0 Z"
+            stroke-width="0"
+          ></path>
+          <path
+            fill="#ffffff"
+            d="M 509 148 C 607 148 607 113 705 113 L 705 113 L 705 0 L 509 0 Z"
+            stroke-width="0"
+          ></path>
+          <path
+            fill="#ffffff"
+            d="M 704 113 C 812 113 812 153 920 153 L 920 153 L 920 0 L 704 0 Z"
+            stroke-width="0"
+          ></path>
+          <path
+            fill="#ffffff"
+            d="M 919 153 C 1048.5 153 1048.5 118 1178 118 L 1178 118 L 1178 0 L 919 0 Z"
+            stroke-width="0"
+          ></path>
+          <path
+            fill="#ffffff"
+            d="M 1177 118 C 1359.5 118 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+            stroke-width="0"
+          ></path>
+          <path
+            fill="#ffffff"
+            d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+            stroke-width="0"
+          ></path>
+        </g>
+      </svg>
+    </section>
+
+    <section
+      id="club"
+      class="max-w-[1440px] px-10 lg:px-28 mb-10 space-y-10 mx-auto"
+    >
+      <div class="flex flex-col items-center gap-y-10">
+        <h1 class="text-2xl font-semibold">Tiya Club's Group Tournaments</h1>
+        <img
+          src="/tiya/assets/professional-golf-player-ufG-UN2m.jpg"
+          class="w-full md:w-1/2 rounded-xl hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <div class="sm:w-1/2 mx-auto space-y-5">
+        <h2 class="text-xl font-semibold">Golf Club based in Orlando</h2>
+        <h2 class="text-gray-500 text-justify text-base">
+          Tiya Golf Club is Bootstrap v5.3.0 HTML CSS template for your golf
+          related websites. Anyone can download, edit and use this layout for
+          commercial purposes.
+        </h2>
+        <h2 class="text-gray-500 text-justify text-base">
+          Tiya is 100% free CSS template provided by TemplateMo website. Please
+          tell your friends about our website. Thank you for visiting.
+        </h2>
+      </div>
+      <div
+        class="bg-custom2 bg-opacity-50 p-5 sm:w-1/2 mx-auto space-y-4 rounded-xl"
+      >
+        <h1 class="text-custom font-bold">Event Detail</h1>
+
+        <p class="flex w-full justify-between text-custom font-bold">
+          Date: <span class="text-gray-500">18 Mar 2048</span>
+        </p>
+
+        <p class="flex w-full justify-between text-custom font-bold">
+          Location: <span class="text-gray-500">Tiya Golf Club</span>
+        </p>
+
+        <p class="flex w-full justify-between text-custom font-bold">
+          Ticket: <span class="text-gray-500"> $150</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="px-10 lg:px-28 max-w-[1440px] mx-auto">
+      <div class="flex flex-col items-center justify-center">
+        <div class="relative">
+          <img src="./WorldMap.svg" alt="" class="w-[550px] h-[237px]" />
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              class="bg-custom p-5 rounded-2xl text-white text-base font-medium space-y-2 text-center"
+            >
+              <p>London, United Kingdom</p>
+              <p>(020) 010-020-0340</p>
+              <p class="mb-4">info@company.com</p>
+              <a href="./index.html">
+                <p
+                  class="bg-orange-500 hover:bg-red-400 transition-transform duration-500 -ml-5 text-center -mr-5 -mb-5 p-2 rounded-b-2xl"
+                >
+                  Direction
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section six end-->
+    <section class="px-10 lg:px-28 pt-5 lg:pt-28 max-w-[1440px] mx-auto">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+        <a
+          class="text-black font-bold flex items-center mb-5"
+          href="index.html"
+        >
+          <img class="w-16 h-16" src="./logo.png" alt="logo" />
+          <span class="text-2xl"
+            >Tiya <small class="block uppercase text-sm">Golf Club</small></span
+          >
+        </a>
+
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:gap-x-24 relative z-10"
+        >
+          <div class="space-y-4 mb-5 w-full lg:w-4/5">
+            <h3 class="font-semibold md:text-2xl">Join Us</h3>
+            <p
+              class="md:text-xl text-gray-500 flex justify-between items-start"
+            >
+              Mon-Fri <span>6:00 AM - 6:00 PM</span>
+            </p>
+            <hr />
+            <p class="md:text-xl text-gray-500 flex justify-between">
+              Sat-Sun <span>6:30 AM - 8:30 PM</span>
+            </p>
+            <hr />
+            <p class="md:text-xl text-gray-500">
+              Copyright © 2048 Tiya Golf Club
+            </p>
+          </div>
+          <div class="mb-2">
+            <div class="mb-4">
+              <i
+                class="fa-brands fa-facebook p-1 border text-white bg-black rounded-full md:text-3xl"
+              ></i>
+              <i
+                class="fa-brands fa-twitter border p-1 text-white bg-black rounded-full md:text-3xl"
+              ></i>
+              <i
+                class="fa-brands fa-instagram text-white bg-black rounded-full p-1 md:text-3xl"
+              ></i>
+            </div>
+            <p class="text-gray-500 md:text-xl lg:whitespace-nowrap">
+              Design By:
+              <a
+                href="https://github.com/2rakibul"
+                target="_blank"
+                class="hover:text-red-400"
+                >Rakibul Hasan</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <svg
+        class="absolute left-0 sm:-mt-32"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#81B29A"
+          fill-opacity="1"
+          d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <a
+      href="#home"
+      class="fixed bottom-7 right-7 z-50 bg-custom p-4 rounded-full text-white"
+    >
+      <i class="fas fa-angle-up sm:text-2xl"></i>
+    </a>
+  </body>
+</html>
