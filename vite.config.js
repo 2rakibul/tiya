@@ -6,7 +6,7 @@ export default defineConfig({
             input:{
                 main:'index.html',
                 event:'event.html',
-                listing:'lis`ting.html',
+                listing:'listing.html',
             }
         }
     }
